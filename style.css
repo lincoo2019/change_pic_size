@@ -53,8 +53,8 @@ input[type="range"] {
 
 .preset-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.8rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 
@@ -64,11 +64,61 @@ input[type="range"] {
   border: 1px solid #007AFF;
   padding: 8px 12px;
   font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.small-btn {
+  padding: 8px 6px;
+  font-size: 0.75rem;
+}
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  margin-bottom: 2px;
+}
+
+.size-svg-icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.size-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.size-text {
+  font-size: 0.6rem;
+  line-height: 1;
+  white-space: nowrap;
+  font-weight: 400;
+  opacity: 0.8;
 }
 
 .preset-btn:hover {
   background: #007AFF;
   color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0,122,255,0.2);
 }
 
 #scale-value {
