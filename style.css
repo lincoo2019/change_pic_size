@@ -51,6 +51,26 @@ input[type="range"] {
   margin-top: 0.5rem;
 }
 
+.preset-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.preset-btn {
+  background: rgba(0,122,255,0.1);
+  color: #007AFF;
+  border: 1px solid #007AFF;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.preset-btn:hover {
+  background: #007AFF;
+  color: white;
+}
+
 #scale-value {
   display: inline-block;
   min-width: 40px;

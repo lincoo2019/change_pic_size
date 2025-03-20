@@ -19,6 +19,18 @@ scaleInput.addEventListener('input', (e) => {
   scaleValue.textContent = `${Math.round(config.scale * 100)}%`;
 });
 
+// 预设尺寸按钮点击事件
+document.querySelectorAll('.preset-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const width = btn.dataset.width;
+    const height = btn.dataset.height;
+    widthInput.value = width;
+    heightInput.value = height;
+    widthInput.dispatchEvent(new Event('input'));
+    heightInput.dispatchEvent(new Event('input'));
+  });
+});
+
 // 创建后台Canvas
 const offscreenCanvas = new OffscreenCanvas(1, 1);
 const offscreenCtx = offscreenCanvas.getContext('2d');
